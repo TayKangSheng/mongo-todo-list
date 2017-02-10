@@ -34,13 +34,22 @@ function list () {
 }
 function show (id) {
   // find the TODO with this id and console log it
-  Todo.find({ _id: id }, function (err, output) {
+
+  // Todo.find({ _id: id }, function (err, output) {
+  //   if (err) {
+  //     console.log(err)
+  //     return
+  //   }
+  //   // assuming id is unique
+  //   console.log(output[0])
+  // })
+
+  Todo.findById(id, function (err, output) {
     if (err) {
       console.log(err)
       return
     }
-    // assuming id is unique
-    console.log(output[0])
+    console.log(output)
   })
 }
 function update (id, params) {
