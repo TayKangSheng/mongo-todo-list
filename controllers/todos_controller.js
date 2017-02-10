@@ -68,6 +68,7 @@ function update (id, params) {
         console.log(err)
         return
       }
+      // console.log(output)
       // console.log('Updated name')
     })
   }
